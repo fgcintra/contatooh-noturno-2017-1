@@ -33,7 +33,7 @@ module.exports = function(app) {
       ); 
 
    };
-   
+   //Função criada para remover novos contatos: LUCIANO JÚNIOR 4ºADS   
    controller.removeContato = function(req, res) {
       
       Contato.remove({_id: req.params.id}).exec().then(
