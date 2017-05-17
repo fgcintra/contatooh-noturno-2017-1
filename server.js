@@ -1,3 +1,4 @@
+//código alterado Sócrates
 var http = require('http');
 var app = require('./config/express')(); // Cuidado: tem dois 
                                          // parênteses vazios aqui
