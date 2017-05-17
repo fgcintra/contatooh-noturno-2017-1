@@ -1,7 +1,16 @@
+// app/controllers/home.js
+
 module.exports = function() {
-   var controller = {}; // Objeto vazio
-   controller.index = function(req, res) {
-      res.render('index', {nome: 'Contatooh'});
-   };
-   return controller;
-};
+
+    var controller = {};
+    
+    controller.index = function(req, res) {
+
+        // retorna a página index.ejs
+        res.render('index', {nome: 'Guaca Mole'});
+
+    };
+
+    return controller;
+    
+}

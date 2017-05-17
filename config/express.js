@@ -1,28 +1,37 @@
-var express = require('express');
-//var home = require('../app/routes/home');
-var load = require('express-load');
+// config/express.js
+
+var	express	= require('express');
+var	load = require('express-load');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+//var home = require('../app/routes/home');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
-var methodOverride = require('method-override');
 
 module.exports = function() {
-    var app = express();
+
+    var	app	= express();
+
+    /**
+     * variável	de ambiente
+     */
     app.set('port', 3000);
+
+    /**
+     * middlewares
+     */
     app.use(express.static('./public'));
     app.set('view engine', 'ejs');
     app.set('views', './app/views');
-    //home(app);
-
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(bodyParser.json());
+    // app.use(require('method-override')());
     app.use(methodOverride());
+    /** Autenticação */
     app.use(cookieParser());
     app.use(session(
         {
-            // Coloque sua frase secreta abaixo
-            // A minha: "só o conhecimento emancipa", em latim
             secret: 'Sola scientia emancipat',
             resave: true,
             saveUninitialized: true
@@ -31,9 +40,13 @@ module.exports = function() {
     app.use(passport.initialize());
     app.use(passport.session());
 
-    load('models', {cwd: 'app'})
-        .then('controllers')
-        .then('routes')
-        .into(app);
+    /**
+     * carregamento
+     */
+    // home(app);
+    // load('controllers', {cwd: 'app'}).then('routes').into(app);
+    load('models', {cwd: 'app'}).then('controllers').then('routes').into(app);
+
     return app;
+
 };

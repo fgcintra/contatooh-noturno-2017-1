@@ -1,24 +1,42 @@
 {
   "name": "contatooh",
   "version": "1.0.0",
-  "description": "Agenda de contatos",
+  "description": "Sistema de controle de contatos.",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "directories": {
+    "doc": "docs"
   },
-  "author": "Fausto G. Cintra <fausto@fgcintra.pro.br>",
-  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getuliovinicius/programacao.web.I.git"
+  },
+  "keywords": [
+    "contatooh",
+    "contatos"
+  ],
+  "author": "Getulio Vincius <getuliovinits@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/getuliovinicius/programacao.web.I/issues"
+  },
+  "homepage": "https://getuliovinicius.github.io/programacao.web.I/",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "bower": "^1.8.0",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.6",
-    "express": "^4.14.1",
+    "express": "^4.15.2",
     "express-load": "^1.1.15",
     "express-session": "^1.15.2",
     "method-override": "^2.3.8",
     "mongodb": "^2.2.26",
     "mongoose": "^4.9.5",
     "mongoose-findorcreate": "^1.0.1",
+    "nodemon": "^1.11.0",
     "passport": "^0.3.2",
     "passport-github": "^1.1.0"
   }
