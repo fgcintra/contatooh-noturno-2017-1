@@ -1,30 +1,93 @@
 <!DOCTYPE html>
-<html ng-app="contatooh">
-   <head>
-      <meta name="viewport" content="width=device-width" />
-      
-      <link rel="stylesheet"
-         href="vendor/bootstrap/dist/css/bootstrap.css" />
-      
-      <link rel="stylesheet"
-         href="vendor/bootstrap/dist/css/bootstrap-theme.css" />
+<html lang="pt-BR" ng-app="contatooh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+	<title>TITULO</title>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap-theme.min.css" media="screen">
+	<!--<link rel="stylesheet" type="text/css" href="assets/css/main.css" media="screen">-->
+</head>
 
-      <meta charset="utf-8" />
-      <title>Bem-vindo!</title>
-   </head>
-   <body>
-      
-      <div ng-view></div>
+<!--<body>-->
+<body class="container" ng-controller="ContatosController">
 
-      <a href="#!/ajuda" class="btn btn-default">Ajuda do Contatooh</a>
-         
-      <script src="vendor/angular/angular.js"></script>
-      <script src="vendor/angular-route/angular-route.js"></script>
-      <script src="vendor/angular-resource/angular-resource.js"></script>
-      <script src="js/main.js"></script>
-      <script src="js/services/ContatoService.js"></script>
-      <script src="js/controllers/ContatosController.js"></script>
-      <script src="js/controllers/ContatoController.js"></script>
-   
-   </body>
+	<div ng-view></div>
+
+	<hr>
+
+    <!--Questão da prova-->
+    <div class="row">
+        <div class="col-xs-12">
+            <a class="btn btn-default" href="#!/ajuda">Ajuda</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+			<div>
+        		<blockquote class="blockquote-reverse">
+        			<p>Aprender sem pensar é esforço vão; pensar sem nada aprender é nocivo.</p>
+					<footer>Confúcio</footer>
+        		</blockquote>
+        	</div>
+			<div>
+        		<blockquote class="blockquote-reverse">
+        			<p>A coisa mais indispensável a um homem é reconhecer o uso que deve fazer do seu próprio conhecimento.</p>
+					<footer>Platão</footer>
+        		</blockquote>
+        	</div>
+            <div>
+        		<blockquote class="blockquote-reverse">
+        			<p>Não é o tamanho do cão na luta, é o tamanho da luta no cão.</p>
+        			<footer>Mark Twain</footer>
+        		</blockquote>
+        	</div>
+            <div>
+        		<blockquote class="blockquote-reverse">
+        			<p>O homem tem mil planos para si mesmo. O destino, só um para cada.</p>
+        			<footer>Mêncio</footer>
+        		</blockquote>
+        	</div>
+        	<div>
+        		<blockquote class="blockquote-reverse">
+        			<p>A verdade não resulta do número dos que nela creem.</p>
+        			<footer>Galileu</footer>
+        		</blockquote>
+        	</div>
+        	<div>
+        		<blockquote class="blockquote-reverse">
+        			<p>O homem realmente culto não se envergonha de fazer perguntas também aos menos instruídos.</p>
+        			<footer>Lao-tsé</footer>
+        		</blockquote>
+        	</div>
+        	<div>
+        		<blockquote class="blockquote-reverse">
+        			<p>Bem começado, metade feito.</p>
+        			<footer>Aristóteles</footer>
+        		</blockquote>
+        	</div>
+        	<div>
+        		<blockquote class="blockquote-reverse">
+        			<p>O único homem educado é o homem que aprendeu a aprender.</p>
+        			<footer>Carl Rogers</footer>
+        		</blockquote>
+        	</div>
+        </div>
+    </div>
+
+	<!-- Carrega os scripts e bibliotecas javascript -->
+	<script type="text/javascript" src="vendor/angular/angular.js"></script>
+	<script type="text/javascript" src="vendor/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="vendor/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/services/ContatoService.js"></script>
+	<!--<script type="text/javascript" src="js/services/InterceptorService.js"></script>-->
+	<script type="text/javascript" src="js/controllers/ContatosController.js"></script>
+	<script type="text/javascript" src="js/controllers/ContatoController.js"></script>
+	<script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
 </html>

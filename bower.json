@@ -1,12 +1,16 @@
 {
   "name": "contatooh",
-  "description": "Agenda de contatos",
+  "description": "Sistema de controle de contatos.",
   "main": "server.js",
   "authors": [
-    "Fausto G. Cintra <fausto@fgcintra.pro.br>"
+    "Getulio Vincius <getuliovinits@gmail.com>"
   ],
-  "license": "ISC",
-  "homepage": "",
+  "license": "GPL-3.0",
+  "keywords": [
+    "contatooh",
+    "contatos"
+  ],
+  "homepage": "https://github.com/getuliovinicius/programacao.web.I",
   "private": true,
   "ignore": [
     "**/.*",
@@ -16,9 +20,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.6.2",
-    "angular-route": "^1.6.3",
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
     "bootstrap": "^3.3.7",
-    "angular-resource": "^1.6.3"
+    "angular-resource": "^1.6.4"
   }
 }

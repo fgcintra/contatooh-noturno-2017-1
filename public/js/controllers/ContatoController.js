@@ -1,51 +1,51 @@
-angular.module('contatooh')
-	.controller('ContatoController', 
-	function($scope, $routeParams, $resource, Contato) {
+// public/js/controllers/ContatoController.js
 
-		//var Contato = $resource('contatos/:id');
+angular.module('contatooh').controller('ContatoController',	function($scope, $routeParams, /*$resource,*/ Contato) {
 
-		$scope.mensagem = {};
+    console.log($routeParams.contatoId);
 
-		if($routeParams.contatoId) {
-		  Contato.get({id: $routeParams.contatoId},
-			 function(contato) {
-				$scope.contato = contato;
-			 },
-			 function(erro) {
+    $scope.mensagem = {};
+
+    if($routeParams.contatoId) {
+        Contato.get({id: $routeParams.contatoId},
+            function(contato) {
+                $scope.contato = contato;
+            },
+            function(erro) {
+
+                console.log(erro);
+
+                $scope.mensagem = {
+                    texto: 'Não foi possível obter o contato',
+                    class: 'danger'
+                };
+
+            }
+        );
+    } else {
+        $scope.contato = new Contato();
+    }
+
+    $scope.salvaContato = function() {
+        $scope.contato.$save().then(
+			function() {
 				$scope.mensagem = {
-					 texto: 'Não foi possível obter o contato',
-					 class: 'danger'
+					texto: 'Contato salvo com sucesso.',
+					class: 'success'
 				};
-				console.log(erro);
-			 } 
-		  );
-		} else {
-		  $scope.contato = new Contato();
-		}
-
-		$scope.salva = function() {
-		  $scope.contato.$save().then(
-			 function() {
-				$scope.mensagem = {
-				  texto: 'Contato salvo com sucesso',
-				  class: 'info'
-				};
-				// Limpa o formulário
 				$scope.contato = new Contato();
-			 },
-			 function(erro) {
+			},
+			function(erro) {
 				$scope.mensagem = {
-				  texto: 'Não foi possível salvar o contato',
-				  class: 'danger'
-				};
-			 }
-		  );
-		}
+					texto: 'Não foi possível salvar o contato.',
+					class: 'danger'
+                };
+			}   
+		);
+    };
 
-      // Preenche uma lista com todos os contatos cadastrados
-      // para popular o combobox do contato de emergência
-      Contato.query(function(contatos) {
-         $scope.contatos = contatos;
-      });
+    Contato.query(function(contatos) {
+        $scope.contatos = contatos;
+    });
 
-	});
+});
