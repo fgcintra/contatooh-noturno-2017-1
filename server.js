@@ -1,3 +1,4 @@
+﻿//Código Alterado Iury
 var http = require('http');
 var app = require('./config/express')(); // Cuidado: tem dois 
                                          // parênteses vazios aqui
