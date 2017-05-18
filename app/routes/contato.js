@@ -1,3 +1,5 @@
+// Alterações trabalho de GIT
+
 function verificaAutenticacao(req, res, next) {
    
 	if(req.isAuthenticated()) {

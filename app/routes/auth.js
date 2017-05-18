@@ -1,3 +1,5 @@
+// Alterações trabalho de GIT
+
 var passport = require('passport');
 
 module.exports = function(app) {
