@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var findOrCreate = require('mongoose-findorcreate');
 
 module.exports = function() {
-
+   // Definição do schema para os usuários salvos no mongo - André Morais Martins
    var schema = mongoose.Schema({
       login: {
          type: String,
