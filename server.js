@@ -1,6 +1,10 @@
+
+//  I am the sword in the darkness! Código alterado
+// dracarys
 var http = require('http');
 var app = require('./config/express')(); // Cuidado: tem dois 
                                          // parênteses vazios aqui
+                                        
 
 require('./config/passport')(); // Dois parênteses vazios aqui tb                                         
 
