@@ -1,4 +1,4 @@
-module.exports = function(app) {
+﻿module.exports = function(app) {
    
 	var Contato = app.models.contato;
 	
@@ -83,3 +83,4 @@ module.exports = function(app) {
 
    return controller;
 };
+//Comentário para o trabalho de GIT do Professor Fausto - Lincoln
