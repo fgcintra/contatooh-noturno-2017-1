@@ -1,3 +1,5 @@
+
+//Comentário para o trabalho de Git
 module.exports = function(app) {
    
 	var Contato = app.models.contato;
