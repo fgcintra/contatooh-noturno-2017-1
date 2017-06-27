@@ -1,3 +1,4 @@
+//Criação de todas as rotas da aplição na parte do cliente - Júnior Mendonca
 angular.module('contatooh', ['ngRoute', 'ngResource'])
    .config(function($routeProvider, $httpProvider) {
 

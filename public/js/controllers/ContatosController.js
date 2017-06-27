@@ -23,6 +23,7 @@ angular.module('contatooh')
       // Carrega a tela com os dados iniciais
       buscaContatos();
 
+      //Remove um contato pelo id - Júnior Mendonca
       $scope.remove = function(contato) {
          var idDel = contato._id;
          Contato.delete({id: idDel}, 
