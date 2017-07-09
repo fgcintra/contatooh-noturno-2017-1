@@ -35,7 +35,7 @@ module.exports = function(app) {
       ); 
 
    };
-   
+   //Função criada para remover novos contatos: LUCIANO JÚNIOR 4ºADS   
    controller.removeContato = function(req, res) {
       // Remove eventuais operadores do MongoDB contidos
       // dentro do valor do id, evitando danos ao banco de dados
